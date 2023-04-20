@@ -1,7 +1,6 @@
 # Birthday Reminder Bot
 Bot that remembers birthdays and sends a telegram message with the notice.
-![Cake](https://github.com/amuracciole/birthday_reminder/blob/main/cake_gif.gif)
-<img src="https://github.com/amuracciole/birthday_reminder/blob/main/cake_gif.gif" width="200" height="100">
+<img src="https://github.com/amuracciole/birthday_reminder/blob/main/cake_gif.gif" width="400" height="600">
 
 
 ## Keys :key:
