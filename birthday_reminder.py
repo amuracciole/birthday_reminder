@@ -10,7 +10,6 @@ def check_birthday():
             print(f"Today is {name}'s birthday!")
             name_list.append(name)
     string_name_list = "\n".join(name_list)
-    print("LISTA:")
     #print(string_name_list,len(string_name_list))
     if len(string_name_list) == 0:
         exit()
