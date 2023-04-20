@@ -1,0 +1,1 @@
+birthdays_list = {'John': '15-02-1993', 'Peter': '09-10-1990'}
