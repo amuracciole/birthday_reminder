@@ -35,10 +35,10 @@ while (True):
         option = input("OPTION: ")
         if option == "1":
             name = input("Name of the person: ")
-            date = input("Enter the birthday in the format DD-MM-YYYY: ")
+            date = input("Enter the birthday in the format DDMMYYYY: ")
             try:
-                date = datetime.datetime.strptime(date, "%d-%m-%Y")
-                birthdays_list[name] = date.strftime("%d-%m-%Y")
+                date = datetime.datetime.strptime(date, "%d%m%Y")
+                birthdays_list[name] = date.strftime("%d/%m/%Y")
                 with open('birthdays.py', 'w') as f:
                     f.write('birthdays_list = ' + str(birthdays_list))
                 print("Added successfully!")
@@ -49,10 +49,10 @@ while (True):
             os.system('clear')
         elif option == "2":
             event_name = input("Name of the event: ")
-            event_date = input("Enter the date in the format DD-MM-YYYY: ")
+            event_date = input("Enter the date in the format DDMM: ")
             try:
-                event_date = datetime.datetime.strptime(event_date, "%d-%m-%Y")
-                events_list[event_name] = event_date.strftime("%d-%m-%Y")
+                event_date = datetime.datetime.strptime(event_date, "%d%m")
+                events_list[event_name] = event_date.strftime("%d/%m")
                 with open('events.py', 'w') as f:
                     f.write('events_list = ' + str(events_list))
                 print("Added successfully!")
