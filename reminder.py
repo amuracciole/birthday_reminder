@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import datetime
 from birthdays import birthdays_list
 from events import events_list
@@ -24,7 +26,6 @@ def check_birthday(when):
         send_telegram_msg(when, complete_when_date, name_list, count_list)
 
 def check_events():
-    print("events")
     today = datetime.date.today().strftime('%d/%m')
     complete_today = datetime.date.today().strftime('%d/%m/%Y')
     event_list=[]

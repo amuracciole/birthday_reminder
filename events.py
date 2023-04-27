@@ -1,1 +1,3 @@
-events_list = {'Test event': '04-11-2002'}
+# -*- coding: utf-8 -*-
+
+events_list = {'event1': '25/12', 'enevt 2': '01/01'}
