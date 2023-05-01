@@ -8,10 +8,16 @@ import config
 def send_telegram_msg(when, date, names, count):
     token=config.TELEGRAM_TOKEN
     chat_id = config.TELEGRAM_CHAT_ID
-    text_1 = "🎂 {} ({}) is the birthday of:".format(when, date)
-    text_2 = "\n"
-    for x in range(0,len(count)):
-        text_2 = text_2 + "{} ({})".format(names[x], count[x]) + "\n"
+    if count != "null":
+        text_1 = "🎂 {} ({}) is the birthday of:".format(when, date)
+        text_2 = "\n"
+        for x in range(0,len(names)):
+            text_2 = text_2 + "{} ({})".format(names[x], count[x]) + "\n"
+    elif count == "null":
+        text_1 = "🗓 Events for {} ({}):".format(when, date)
+        text_2 = "\n"
+        for x in range(0,len(names)):
+            text_2 = text_2 + "{}".format(names[x]) + "\n"
     text=text_1 + text_2
     print (text)
     url_req = "https://api.telegram.org/bot" + token + "/sendMessage" + "?chat_id=" + chat_id + "&text=" + text
