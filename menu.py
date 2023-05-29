@@ -31,12 +31,13 @@ def add_value(name, type, date, recurrency):
 
 ### PROGRAM ###
 while (True):
+    os.system('clear')
     main_menu()
     main_option = input("OPTION: ")
     if (main_option == "1"):
         os.system('clear')
         type = "Event"
-        name = input("Name of the event: ")
+        name = input("Name of the event/birthday person: ")
         date = input("Enter the date in the format DDMMYYYY: ")
         type = input("Birthday (B) or Other (O): ")
         if (type == "B" or type == "b"):
