@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+            "name": "Aniversary",
+            "type": "Event",
+            "date": "25/05/2023",
+            "recurrency": true
+        },
+        {
+            "name": "Movie",
+            "type": "Event",
+            "date": "24/10/2023",
+            "recurrency": false
+        },
+        {
+            "name": "Max",
+            "type": "Birthday",
+            "date": "29/01/1990",
+            "recurrency": true
+        }
+    ]
+}
