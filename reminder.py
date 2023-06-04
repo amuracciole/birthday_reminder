@@ -11,8 +11,8 @@ def check_event(when):
     elif when == "Tomorrow":
         when_date = (datetime.date.today() + datetime.timedelta(days=1)).strftime('%d/%m')
         complete_when_date = (datetime.date.today() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        
-    with open('events.json', encoding='utf-8') as file:
+
+    with open(config.EVENTS_PATH, encoding='utf-8') as file:
         data = json.load(file)
     
     event_list=[]
@@ -34,8 +34,8 @@ def check_birthday(when):
     elif when == "Tomorrow":
         when_date = (datetime.date.today() + datetime.timedelta(days=1)).strftime('%d/%m')
         complete_when_date = (datetime.date.today() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        
-    with open('events.json', encoding='utf-8') as file:
+
+    with open(config.EVENTS_PATH, encoding='utf-8') as file:
         data = json.load(file)
     
     name_list=[]
@@ -51,7 +51,7 @@ def check_birthday(when):
         return()
     else:
         send_telegram_msg(when, complete_when_date, name_list, count_list)
-            
+
 ### PROGRAM ###
 check_birthday("Today")
 check_birthday("Tomorrow")
