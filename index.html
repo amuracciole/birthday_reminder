@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+</head>
+<body>
+  <h1>Calendar</h1>
+
+  <button id="viewAllEventsButton">Ver todos los eventos</button>
+  <div id="responseContainerGetEvents"></div>
+  <hr>
+
+  <h3>Ver un evento</h3>
+  <label for="eventId">Ingrese el ID del evento:</label>
+  <input type="text" id="eventId">
+  <button id="viewEventButton">Ver evento</button>
+  <div id="responseContainerGetEvent"></div>
+
+  <hr>
+
+  <h3>Agregar evento</h3>
+  <label for="eventIdInput">Id:</label>
+  <input type="text" id="eventIdInput">
+  <br>
+  <label for="eventNameInput">Nombre:</label>
+  <input type="text" id="eventNameInput">
+  <br>
+  <label for="eventTypeInput">Tipo:</label>
+  <input type="text" id="eventTypeInput">
+  <br>
+  <label for="eventDateInput">Fecha:</label>
+  <input type="text" id="eventDateInput">
+  <br>
+  <label for="eventRecurrencyInput">Recurrencia:</label>
+  <input type="checkbox" id="eventRecurrencyInput">
+  <br>
+  <button id="addEventButton">Agregar evento</button>
+  <hr>
+  <div id="responseContainerAddEvent"></div>
+
+
+  <h3>Eliminar un evento</h3>
+  <label for="deleteEventIdInput">Ingrese el ID del evento a eliminar:</label>
+  <input type="text" id="deleteEventIdInput">
+  <button id="deleteEventButton">Eliminar evento</button>
+  <div id="responseContainerDeleteEvent"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

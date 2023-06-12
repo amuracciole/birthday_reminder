@@ -10,11 +10,6 @@ def main_menu():
     print("2 - Delete event")
     print("3 - See event")
     print("0 - EXIT\n")
-  
-def select_type_menu():
-    print("1 - Add birthday")
-    print("2 - Add other event")
-    print("0 - EXIT\n")
 
 def add_value(name, type, date, recurrency):
     with open('events.json', encoding='utf-8') as file:
@@ -37,7 +32,7 @@ while (True):
     if (main_option == "1"):
         os.system('clear')
         type = "Event"
-        name = input("Name of the event/birthday person: ")
+        name = input("Name of the birthday person / event: ")
         date = input("Enter the date in the format DDMMYYYY: ")
         type = input("Birthday (B) or Other (O): ")
         if (type == "B" or type == "b"):
