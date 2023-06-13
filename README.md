@@ -12,6 +12,7 @@ To interact with the bot, you have 2 options:
 
 * A menu which is executed with the command "python menu.py". 
 * Web interface running in http://localhost:2600 and  consumes API resources on port 2601
+
 Both allows you to add and remove birthdays and events to the list, as well as display it.
 
 ## Run API server: :zap:
