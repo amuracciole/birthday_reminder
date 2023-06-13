@@ -23,7 +23,7 @@ class Event(BaseModel):
     recurrency: bool
 
 def cargar_eventos():
-    with open(config.EVENTS2_PATH, encoding='utf-8') as file:
+    with open(config.EVENTS_PATH, encoding='utf-8') as file:
         data = json.load(file)
         return data["events"]
 
@@ -57,7 +57,7 @@ def get_event(id_event: int):
 def create_event(event: Event):
     events = cargar_eventos()
     events.append(event.dict())
-    with open(config.EVENTS2_PATH, 'w', encoding='utf-8') as file:
+    with open(config.EVENTS_PATH, 'w', encoding='utf-8') as file:
         json.dump({"events": events}, file, indent=4)
     return {"mensaje": "event created"}
 
@@ -69,7 +69,7 @@ def create_event(event: Event):
 def delete_event(event_id: int):
     events = cargar_eventos()
     events = [event for event in events if event["id"] != event_id]
-    with open(config.EVENTS2_PATH, 'w', encoding='utf-8') as file:
+    with open(config.EVENTS_PATH, 'w', encoding='utf-8') as file:
         json.dump({"events": events}, file, indent=4)
     return {"mensaje": "event deleted"}
 
@@ -86,7 +86,7 @@ def update_event(event_id: int, updated_event: dict):
             event.update(updated_event)
             break
 
-    with open(config.EVENTS2_PATH, 'w', encoding='utf-8') as file:
+    with open(config.EVENTS_PATH, 'w', encoding='utf-8') as file:
         json.dump({"events": events}, file, indent=4)
 
     return {"mensaje": "event updated"}

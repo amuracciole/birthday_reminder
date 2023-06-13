@@ -2,50 +2,62 @@
 <html>
 <head>
   <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Calendar</h1>
 
-  <button id="viewAllEventsButton">Ver todos los eventos</button>
-  <div id="responseContainerGetEvents"></div>
+  <button id="viewAllEventsButton">See events</button>
+  <pre id="responseContainerGetEvents"></pre>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Recurring</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+  
+  
   <hr>
 
-  <h3>Ver un evento</h3>
-  <label for="eventId">Ingrese el ID del evento:</label>
-  <input type="text" id="eventId">
-  <button id="viewEventButton">Ver evento</button>
-  <div id="responseContainerGetEvent"></div>
+  <h2>Add event</h2>
+  <form>
 
-  <hr>
-
-  <h3>Agregar evento</h3>
-  <label for="eventIdInput">Id:</label>
-  <input type="text" id="eventIdInput">
-  <br>
-  <label for="eventNameInput">Nombre:</label>
+  <label for="eventNameInput">Name:</label>
   <input type="text" id="eventNameInput">
   <br>
-  <label for="eventTypeInput">Tipo:</label>
-  <input type="text" id="eventTypeInput">
+  <label for="eventTypeInput">Type:</label>
+  <select id="eventTypeInput">
+    <option value="Birthday" selected>Birthday</option>
+    <option value="Event">Event</option>
+  </select>
   <br>
-  <label for="eventDateInput">Fecha:</label>
+  <label for="eventDateInput">Date:</label>
   <input type="text" id="eventDateInput">
+
   <br>
-  <label for="eventRecurrencyInput">Recurrencia:</label>
-  <input type="checkbox" id="eventRecurrencyInput">
-  <br>
-  <button id="addEventButton">Agregar evento</button>
+  <label for="eventRecurringInput">Recurring:</label>
+  <input type="checkbox" id="eventRecurringInput">
+  <p><button id="addEventButton">Agregar evento</button></p>
+  </form>
+  
   <hr>
   <div id="responseContainerAddEvent"></div>
 
 
-  <h3>Eliminar un evento</h3>
-  <label for="deleteEventIdInput">Ingrese el ID del evento a eliminar:</label>
-  <input type="text" id="deleteEventIdInput">
-  <button id="deleteEventButton">Eliminar evento</button>
+  <h2>Delete event</h2>
+  <p><label for="deleteEventIdInput">Enter the ID of the event to delete:</label>
+  <input type="text" id="deleteEventIdInput"></p>
+  <button id="deleteEventButton">Delete event</button>
   <div id="responseContainerDeleteEvent"></div>
 
 
   <script src="script.js"></script>
+
 </body>
 </html>
