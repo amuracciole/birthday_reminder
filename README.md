@@ -7,7 +7,7 @@ Bot that remembers birthdays and sends a telegram message with the notice.
 Plese add you own Telegram keys
 
 ## Run: :computer:
-<img src="https://github.com/amuracciole/birthday_reminder/blob/main/web.png" width="300" height="300">
+<img src="https://github.com/amuracciole/birthday_reminder/blob/main/web.png" width="700" height="300">
 To interact with the bot, you have 2 options:
 - A menu which is executed with the command "python menu.py". 
 - Web interface running in http://localhost:2600 and  consumes API resources on port 2601
