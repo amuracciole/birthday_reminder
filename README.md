@@ -9,8 +9,8 @@ Plese add you own Telegram keys
 ## Run: :computer:
 <img src="https://github.com/amuracciole/birthday_reminder/blob/main/web.png" width="700" height="300">
 To interact with the bot, you have 2 options:
-- A menu which is executed with the command "python menu.py". 
-- Web interface running in http://localhost:2600 and  consumes API resources on port 2601
+* A menu which is executed with the command "python menu.py". 
+* Web interface running in http://localhost:2600 and  consumes API resources on port 2601
 Both allows you to add and remove birthdays and events to the list, as well as display it.
 
 ## Run API server: :zap:
