@@ -4,11 +4,6 @@ const viewAllEventsButton = document.getElementById('viewAllEventsButton');
 const responseContainerGetEvents = document.getElementById('responseContainerGetEvents');
 const tableBody = document.getElementById('tableBody');
 
-function getAllEvents() {
-  fetch('http://localhost:8000/')
-}
-
-
 viewAllEventsButton.addEventListener('click', () => {
   fetch('http://localhost:8000/events')
     .then(response => response.json())
