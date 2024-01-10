@@ -4,6 +4,11 @@ const viewAllEventsButton = document.getElementById('viewAllEventsButton');
 const responseContainerGetEvents = document.getElementById('responseContainerGetEvents');
 const tableBody = document.getElementById('tableBody');
 
+function getAllEvents() {
+  fetch('http://localhost:8000/')
+}
+
+
 viewAllEventsButton.addEventListener('click', () => {
   fetch('http://localhost:8000/events')
     .then(response => response.json())
@@ -115,7 +120,7 @@ deleteEventButton.addEventListener('click', () => {
     method: 'DELETE'
   })
   .then(response => response.json())
-  then(data => {
+  .then(data => {
     responseContainerDeleteEvent.innerHTML = JSON.stringify(data, null, 2);
   })
   .catch(error => {

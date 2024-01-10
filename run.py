@@ -1,5 +1,6 @@
 import subprocess
 import psutil
+import time
 
 def run_command(command):
     process = subprocess.Popen(command, shell=True)
@@ -30,7 +31,25 @@ if __name__ == "__main__":
     # Comando para ejecutar "uvicorn app:app --reload" en el puerto 2601
     uvicorn_command = "uvicorn app:app --host 0.0.0.0 --port 2601"
 
-
     # Ejecutar ambos comandos en segundo plano
-    run_command(http_server_command + " &")
-    run_command(uvicorn_command)
+    http_server_process = subprocess.Popen(http_server_command, shell=True)
+    uvicorn_process = subprocess.Popen(uvicorn_command, shell=True)
+
+    try:
+        # Esperar hasta que se presione Ctrl+C
+        while True:
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        # Manejar Ctrl+C para terminar los procesos
+        print("\nTerminando los procesos...")
+
+        # Terminar los procesos de manera ordenada
+        http_server_process.terminate()
+        uvicorn_process.terminate()
+
+        # Esperar a que los procesos se cierren
+        http_server_process.wait()
+        uvicorn_process.wait()
+
+        print("Procesos terminados.")
